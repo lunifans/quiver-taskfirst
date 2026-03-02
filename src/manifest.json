@@ -1,6 +1,7 @@
 {
-  "name": "quiver",
-  "description": "A modern commutative diagram editor.",
+  "name": "任务优先 - 交换图编辑器",
+  "short_name": "任务优先",
+  "description": "支持 tikz-cd 的交换图在线编辑器",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1a1a1a",

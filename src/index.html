@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>quiver: a modern commutative diagram editor</title>
+    <title>任务优先 - 交换图在线编辑器</title>
     <link rel="icon" href="icon.png">
     <!-- Prevent zooming on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Metadata for Open Graph -->
-    <meta name="description" content="A modern commutative diagram editor with support for tikz-cd.">
-    <meta property="og:title" content="quiver">
-    <meta property="og:url" content="https://varkor.github.io/quiver">
-    <meta property="og:description" content="A modern commutative diagram editor with support for tikz-cd.">
+    <meta name="description" content="支持 tikz-cd 的交换图在线编辑器">
+    <meta property="og:title" content="任务优先">
+    <meta property="og:url" content="https://taskfirst.cn">
+    <meta property="og:description" content="支持 tikz-cd 的交换图在线编辑器">
     <meta property="og:image" content="icon.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
@@ -53,10 +53,10 @@
     </script>
 </head>
 <body>
-    <a id="logo-link" href="https://github.com/varkor/quiver" target="_blank">
+    <a id="logo-link" href="https://taskfirst.cn" target="_blank">
         <img src="quiver.svg" class="logo">
     </a>
-    <noscript>JavaScript must be enabled to use quiver.</noscript>
+    <noscript>必须启用 JavaScript 才能使用“任务优先”交换图编辑器。</noscript>
     <script type="module">
         import { url_parameters } from "./ds.mjs";
         import { cancel, DOM, pointer_event } from "./dom.mjs";
@@ -82,7 +82,7 @@
 
         const loading_screen = new DOM.Div({ class: "loading-screen hidden" })
             .add(new DOM.Element("img", { src: "quiver-blue.svg", class: "logo" }))
-            .add(new DOM.Element("span").add("Loading diagram..."))
+            .add(new DOM.Element("span").add("正在加载交换图..."))
             // Prevent pointer events effected during loading from taking place after loading
             // has completed.
             .listen(pointer_event("down"), cancel)
