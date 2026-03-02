@@ -18,7 +18,11 @@ jobs:
       with:
         node-version: '20' 
 
-    # GitHub 的 Ubuntu 环境默认自带 make 等工具，直接执行构建
+    # 【新增步骤】：让 Ubuntu 服务器临时安装 ImageMagick 图像处理工具
+    - name: Install ImageMagick
+      run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+    # 现在的云端环境已经具备所有条件了，开始执行构建
     - name: Build Quiver (make all)
       run: make all
 
